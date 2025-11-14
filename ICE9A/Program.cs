@@ -30,7 +30,23 @@ namespace ICE9A
         {
             ApplicationConfiguration.Initialize();
 
-            // Instantiate an object of type SelectionForm
+            // Initialize each form
+            SplashForm = new SplashForm();
+            SelectionForm = new SelectionForm();
+            NextForm = new NextForm();
+            FinalForm = new FinalForm();
+            AboutForm = new AboutForm();
+
+            // Initialize Form List
+            Forms =
+            [
+                SplashForm,
+                SelectionForm,
+                NextForm,
+                FinalForm,
+                AboutForm
+            ];
+
             Application.Run(new SelectionForm());
         }
     }
