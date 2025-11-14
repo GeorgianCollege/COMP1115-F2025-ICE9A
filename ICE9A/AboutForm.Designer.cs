@@ -164,7 +164,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "AboutForm";
-            Padding = new Padding(10, 10, 10, 10);
+            Padding = new Padding(10);
             ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterParent;

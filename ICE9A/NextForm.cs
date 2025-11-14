@@ -16,5 +16,28 @@ namespace ICE9A
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// The event is triggered when the Back button is clicked. It shows the Selection form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_Back_Click(object sender, EventArgs e)
+        {
+            Program.Forms[(int)FormType.Start].Show();
+            Hide();
+        }
+
+        /// <summary>
+        /// The event is triggered when the Next button is clicked. It shows the Final form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_Next_Click(object sender, EventArgs e)
+        {
+            Program.Forms[(int)FormType.Final].Show();
+            Hide();
+
+        }
     }
 }

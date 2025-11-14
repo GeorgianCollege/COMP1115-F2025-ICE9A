@@ -59,7 +59,7 @@
             RadioButton_Robot = new RadioButton();
             RadioButton_Alien = new RadioButton();
             Button_Reset = new Button();
-            Button_Submit = new Button();
+            Button_Next = new Button();
             TextBox_Name = new TextBox();
             Panel_PrimaryAttributes.SuspendLayout();
             Panel_SecondaryAttributes.SuspendLayout();
@@ -134,66 +134,78 @@
             // 
             // TextBox_AGL
             // 
+            TextBox_AGL.BackColor = SystemColors.Window;
             TextBox_AGL.BorderStyle = BorderStyle.FixedSingle;
             TextBox_AGL.Font = new Font("Calibri", 12F);
             TextBox_AGL.Location = new Point(17, 54);
             TextBox_AGL.Margin = new Padding(2, 1, 2, 1);
             TextBox_AGL.Name = "TextBox_AGL";
+            TextBox_AGL.ReadOnly = true;
             TextBox_AGL.Size = new Size(43, 27);
             TextBox_AGL.TabIndex = 6;
             TextBox_AGL.TextAlign = HorizontalAlignment.Center;
             // 
             // TextBox_STR
             // 
+            TextBox_STR.BackColor = SystemColors.Window;
             TextBox_STR.BorderStyle = BorderStyle.FixedSingle;
             TextBox_STR.Font = new Font("Calibri", 12F);
             TextBox_STR.Location = new Point(72, 54);
             TextBox_STR.Margin = new Padding(2, 1, 2, 1);
             TextBox_STR.Name = "TextBox_STR";
+            TextBox_STR.ReadOnly = true;
             TextBox_STR.Size = new Size(43, 27);
             TextBox_STR.TabIndex = 7;
             TextBox_STR.TextAlign = HorizontalAlignment.Center;
             // 
             // TextBox_VGR
             // 
+            TextBox_VGR.BackColor = SystemColors.Window;
             TextBox_VGR.BorderStyle = BorderStyle.FixedSingle;
             TextBox_VGR.Font = new Font("Calibri", 12F);
             TextBox_VGR.Location = new Point(128, 54);
             TextBox_VGR.Margin = new Padding(2, 1, 2, 1);
             TextBox_VGR.Name = "TextBox_VGR";
+            TextBox_VGR.ReadOnly = true;
             TextBox_VGR.Size = new Size(43, 27);
             TextBox_VGR.TabIndex = 8;
             TextBox_VGR.TextAlign = HorizontalAlignment.Center;
             // 
             // TextBox_PER
             // 
+            TextBox_PER.BackColor = SystemColors.Window;
             TextBox_PER.BorderStyle = BorderStyle.FixedSingle;
             TextBox_PER.Font = new Font("Calibri", 12F);
             TextBox_PER.Location = new Point(183, 54);
             TextBox_PER.Margin = new Padding(2, 1, 2, 1);
             TextBox_PER.Name = "TextBox_PER";
+            TextBox_PER.ReadOnly = true;
             TextBox_PER.Size = new Size(43, 27);
             TextBox_PER.TabIndex = 9;
             TextBox_PER.TextAlign = HorizontalAlignment.Center;
             // 
             // TextBox_INT
             // 
+            TextBox_INT.BackColor = SystemColors.Window;
             TextBox_INT.BorderStyle = BorderStyle.FixedSingle;
             TextBox_INT.Font = new Font("Calibri", 12F);
             TextBox_INT.Location = new Point(239, 54);
             TextBox_INT.Margin = new Padding(2, 1, 2, 1);
             TextBox_INT.Name = "TextBox_INT";
+            TextBox_INT.ReadOnly = true;
             TextBox_INT.Size = new Size(43, 27);
             TextBox_INT.TabIndex = 10;
             TextBox_INT.TextAlign = HorizontalAlignment.Center;
             // 
             // TextBox_WIL
             // 
+            TextBox_WIL.BackColor = SystemColors.Window;
             TextBox_WIL.BorderStyle = BorderStyle.FixedSingle;
             TextBox_WIL.Font = new Font("Calibri", 12F);
             TextBox_WIL.Location = new Point(294, 54);
             TextBox_WIL.Margin = new Padding(2, 1, 2, 1);
             TextBox_WIL.Name = "TextBox_WIL";
+            TextBox_WIL.ReadOnly = true;
             TextBox_WIL.Size = new Size(43, 27);
             TextBox_WIL.TabIndex = 11;
             TextBox_WIL.TextAlign = HorizontalAlignment.Center;
@@ -308,11 +320,13 @@
             // 
             // TextBox_AWA
             // 
+            TextBox_AWA.BackColor = SystemColors.Window;
             TextBox_AWA.BorderStyle = BorderStyle.FixedSingle;
             TextBox_AWA.Font = new Font("Calibri", 12F);
             TextBox_AWA.Location = new Point(17, 54);
             TextBox_AWA.Margin = new Padding(2, 1, 2, 1);
             TextBox_AWA.Name = "TextBox_AWA";
+            TextBox_AWA.ReadOnly = true;
             TextBox_AWA.Size = new Size(43, 27);
             TextBox_AWA.TabIndex = 6;
             TextBox_AWA.TextAlign = HorizontalAlignment.Center;
@@ -330,11 +344,13 @@
             // 
             // TextBox_TOU
             // 
+            TextBox_TOU.BackColor = SystemColors.Window;
             TextBox_TOU.BorderStyle = BorderStyle.FixedSingle;
             TextBox_TOU.Font = new Font("Calibri", 12F);
             TextBox_TOU.Location = new Point(72, 54);
             TextBox_TOU.Margin = new Padding(2, 1, 2, 1);
             TextBox_TOU.Name = "TextBox_TOU";
+            TextBox_TOU.ReadOnly = true;
             TextBox_TOU.Size = new Size(43, 27);
             TextBox_TOU.TabIndex = 7;
             TextBox_TOU.TextAlign = HorizontalAlignment.Center;
@@ -352,11 +368,13 @@
             // 
             // TextBox_RES
             // 
+            TextBox_RES.BackColor = SystemColors.Window;
             TextBox_RES.BorderStyle = BorderStyle.FixedSingle;
             TextBox_RES.Font = new Font("Calibri", 12F);
             TextBox_RES.Location = new Point(128, 54);
             TextBox_RES.Margin = new Padding(2, 1, 2, 1);
             TextBox_RES.Name = "TextBox_RES";
+            TextBox_RES.ReadOnly = true;
             TextBox_RES.Size = new Size(43, 27);
             TextBox_RES.TabIndex = 8;
             TextBox_RES.TextAlign = HorizontalAlignment.Center;
@@ -439,19 +457,20 @@
             Button_Reset.UseVisualStyleBackColor = false;
             Button_Reset.Click += Button_Reset_Click;
             // 
-            // Button_Submit
+            // Button_Next
             // 
-            Button_Submit.BackColor = Color.ForestGreen;
-            Button_Submit.Font = new Font("Calibri", 12F);
-            Button_Submit.ForeColor = SystemColors.ButtonHighlight;
-            Button_Submit.Location = new Point(290, 333);
-            Button_Submit.Margin = new Padding(2, 1, 2, 1);
-            Button_Submit.Name = "Button_Submit";
-            Button_Submit.Size = new Size(92, 33);
-            Button_Submit.TabIndex = 21;
-            Button_Submit.Text = "Submit";
-            Button_Submit.UseVisualStyleBackColor = false;
-            Button_Submit.Click += Button_Submit_Click;
+            Button_Next.BackColor = SystemColors.Window;
+            Button_Next.Enabled = false;
+            Button_Next.Font = new Font("Calibri", 12F);
+            Button_Next.ForeColor = SystemColors.ControlText;
+            Button_Next.Location = new Point(290, 333);
+            Button_Next.Margin = new Padding(2, 1, 2, 1);
+            Button_Next.Name = "Button_Next";
+            Button_Next.Size = new Size(92, 33);
+            Button_Next.TabIndex = 21;
+            Button_Next.Text = "Next";
+            Button_Next.UseVisualStyleBackColor = false;
+            Button_Next.Click += Button_Next_Click;
             // 
             // TextBox_Name
             // 
@@ -466,14 +485,14 @@
             // 
             // SelectionForm
             // 
-            AcceptButton = Button_Submit;
+            AcceptButton = Button_Next;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(422, 404);
             Controls.Add(TextBox_Name);
             Controls.Add(Button_Reset);
             Controls.Add(Button_Random);
-            Controls.Add(Button_Submit);
+            Controls.Add(Button_Next);
             Controls.Add(GroupBox_Species);
             Controls.Add(CheckBox_ShowRandomButton);
             Controls.Add(Panel_SecondaryAttributes);
@@ -530,7 +549,7 @@
         private RadioButton RadioButton_Alien;
         private RadioButton RadioButton_Robot;
         private Button Button_Reset;
-        private Button Button_Submit;
+        private Button Button_Next;
         private TextBox TextBox_Name;
     }
 }

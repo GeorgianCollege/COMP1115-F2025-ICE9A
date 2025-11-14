@@ -71,6 +71,8 @@ namespace ICE9A
             {
                 ComboBox_Career.SelectedIndex = -1;
 
+                Button_Next.Enabled = true;
+
                 foreach (TextBox stat in PrimaryStatTextBoxes)
                 {
                     stat.Text = Roll6d10DropLowest().ToString();
@@ -92,6 +94,8 @@ namespace ICE9A
         {
             // If the ComboBox has been cleared, then return
             if (ComboBox_Career.SelectedIndex < 0) { return; }
+
+            Button_Next.Enabled = true;
 
             for (int attribute = 0; attribute < PrimaryStatTextBoxes.Length; attribute++)
             {
@@ -154,6 +158,8 @@ namespace ICE9A
                 {
                     stat.Text = string.Empty;
                 }
+
+                Button_Next.Enabled = false;
             }
         }
 
@@ -170,10 +176,10 @@ namespace ICE9A
 
         }
 
-        private void Button_Submit_Click(object sender, EventArgs e)
+        private void Button_Next_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-
+            Program.Forms[(int)FormType.Next].Show();
+            Hide();
         }
     }
 }
