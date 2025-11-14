@@ -31,6 +31,11 @@ namespace ICE9A
         // Declaring Secondary Stat TextBox Array
         TextBox[] SecondaryStatTextBoxes;
 
+        string SelectedCareer;
+
+        string SelectedSpecies = "Human";
+
+
         /// <summary>
         /// The Constructor for SelectionForm
         /// </summary>
@@ -71,6 +76,8 @@ namespace ICE9A
             {
                 ComboBox_Career.SelectedIndex = -1;
 
+                SelectedCareer = "Random";
+
                 Button_Next.Enabled = true;
 
                 foreach (TextBox stat in PrimaryStatTextBoxes)
@@ -94,6 +101,8 @@ namespace ICE9A
         {
             // If the ComboBox has been cleared, then return
             if (ComboBox_Career.SelectedIndex < 0) { return; }
+
+            SelectedCareer = ComboBox_Career.SelectedItem.ToString();
 
             Button_Next.Enabled = true;
 
@@ -178,8 +187,28 @@ namespace ICE9A
 
         private void Button_Next_Click(object sender, EventArgs e)
         {
+            Settings.Default.AGL = TextBox_AGL.Text;
+            Settings.Default.STR = TextBox_STR.Text;
+            Settings.Default.VGR = TextBox_VGR.Text;
+            Settings.Default.PER = TextBox_PER.Text;
+            Settings.Default.INT = TextBox_INT.Text;
+            Settings.Default.WIL = TextBox_WIL.Text;
+            Settings.Default.Career = SelectedCareer;
+            Settings.Default.Species = SelectedSpecies;
+            Settings.Default.CharacterName = TextBox_Name.Text;
+
             Program.Forms[(int)FormType.Next].Show();
             Hide();
+        }
+
+        private void RadioButton_Species_CheckedChanged(object sender, EventArgs e)
+        {
+            // Ensure the sender is a RadioButton
+            var radioButton = sender as RadioButton;
+
+            // set the SelectedSpecies variable to the text of the selected RadioButton
+            SelectedSpecies = radioButton.Text;
+
         }
     }
 }

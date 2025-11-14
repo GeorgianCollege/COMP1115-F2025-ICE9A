@@ -404,6 +404,7 @@
             RadioButton_Human.TabStop = true;
             RadioButton_Human.Text = "Human";
             RadioButton_Human.UseVisualStyleBackColor = true;
+            RadioButton_Human.CheckedChanged += RadioButton_Species_CheckedChanged;
             // 
             // GroupBox_Species
             // 
@@ -431,6 +432,7 @@
             RadioButton_Robot.TabIndex = 19;
             RadioButton_Robot.Text = "Robot";
             RadioButton_Robot.UseVisualStyleBackColor = true;
+            RadioButton_Robot.CheckedChanged += RadioButton_Species_CheckedChanged;
             // 
             // RadioButton_Alien
             // 
@@ -443,6 +445,7 @@
             RadioButton_Alien.TabIndex = 20;
             RadioButton_Alien.Text = "Alien";
             RadioButton_Alien.UseVisualStyleBackColor = true;
+            RadioButton_Alien.CheckedChanged += RadioButton_Species_CheckedChanged;
             // 
             // Button_Reset
             // 
