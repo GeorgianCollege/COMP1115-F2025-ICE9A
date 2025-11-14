@@ -47,7 +47,7 @@ namespace ICE9A
                 AboutForm
             ];
 
-            Application.Run(new SelectionForm());
+            Application.Run(SplashForm);
         }
     }
 }
